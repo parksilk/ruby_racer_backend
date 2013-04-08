@@ -1,7 +1,23 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $(document).on('keyup', function(event) {
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+    // Detect which key was pressed and call the appropriate function
+    // Google "jquery keyup what key was pressed" if you don't know how
+
+    if(event.keyCode == 80) {
+      $('#player2_strip td.active').toggleClass('active').next().toggleClass('active');
+      if($('#player2_strip td:last').hasClass('active')) {
+        alert("Player 2 Wins!");
+        location.reload();
+      };
+    };
+
+    if(event.keyCode == 81) {
+      $('#player1_strip td.active').toggleClass('active').next().toggleClass('active');
+      if ($('#player1_strip td:last').hasClass('active')) {
+        alert("Player 1 Wins!");
+        location.reload();
+      };
+    };
+  });
 });
