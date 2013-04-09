@@ -1,0 +1,47 @@
+<script>
+  var Game = {
+    id: "<%= @game.id %>",
+    player1: "<%= @game.player1.name %>",
+    player2: "<%= @game.player2.name %>"
+  }
+</script>
+
+  <h1>Ruby Racer!</h1>
+  <table class="racer_table">
+    <tr id="player1_strip">
+      <td class="active"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr id="player2_strip">
+      <td class="active"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+<!--   <form style="display: none">
+    <input type="hidden" name="player1_name" value="<%= @game.player1.name %>">
+    <input type="hidden" name="player2_name" value="<%= @game.player2.name %>">
+  </form>
+ -->
