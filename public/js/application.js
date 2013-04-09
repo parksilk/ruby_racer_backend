@@ -12,8 +12,8 @@ var gameOver = function (player) {
   }).done(function (response) {
     $('#game_stats').append("<h2>"+winnerName+" wins!</h2><br><a href='/'>New Players</a>");
     $('#game_stats').append("<a href='/'>Play Again</a>");
-    $('#game_stats').append("<a href='/'>Page for this game</a>");
-    $('#game_stats').slideDown();
+    $('#game_stats').append("<a href='/game/history/"+Game.id+"'>Page for this Game</a>");
+    $('#game_stats').slideDown('fast');
 
   });
 };

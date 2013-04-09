@@ -19,3 +19,9 @@ put '/games/:id' do
 
   200
 end
+
+get '/game/history/:id' do
+  @game = Game.find(params[:id])
+  @winner = Player.find(@game.winner)
+  erb :past_game
+end
