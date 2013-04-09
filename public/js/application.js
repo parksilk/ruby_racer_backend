@@ -1,4 +1,5 @@
 var gameOver = function (player) {
+  $(document).off('keyup');
   // do an AJAX call to save winner to database
   //var winnerName = $('form').find('input[name='+player+'_name]').val();
   var winnerName = Game[player]; // defined in game.erb
@@ -10,7 +11,9 @@ var gameOver = function (player) {
     data: {winner: winnerName} // pass time, too
   }).done(function (response) {
     $('.racer_table').after("<h2>"+winnerName+" wins!</h2><br><a href='/'>Restart</a>");
+
   });
+  // gameFinished = true
 };
 
 var updatePlayerPosition = function (player_keycode) {
@@ -38,7 +41,9 @@ var updatePlayerPosition = function (player_keycode) {
 $(document).ready(function() {
   $(document).on('keyup', function(event) {
 
+    // if (gameFinished == true) {
     updatePlayerPosition(event.keyCode);
+    // }
 
     // if(event.keyCode == 80) {
     //   $('#player2_strip td.active').toggleClass('active').next().toggleClass('active');
