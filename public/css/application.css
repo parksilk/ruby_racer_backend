@@ -28,3 +28,16 @@ h1 {
 .racer_table td.active {
   background-color: black;
 }
+
+a {
+  padding-right: 15px;
+}
+
+.game_title {
+  text-decoration: none;
+  color: black;
+}
+
+.game_title:hover {
+  color: purple;
+}

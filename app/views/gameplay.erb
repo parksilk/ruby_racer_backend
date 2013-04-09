@@ -6,9 +6,9 @@
   }
 </script>
 
-  <h1>Ruby Racer!</h1>
-  <table class="racer_table">
+<h1><a class='game_title' href='/'>Ruby Racer!</a></h1>  <table class="racer_table">
     <tr id="player1_strip">
+      <td><%= @game.player1.name %></td>
       <td class="active"></td>
       <td></td>
       <td></td>
@@ -24,6 +24,7 @@
       <td></td>
     </tr>
     <tr id="player2_strip">
+      <td><%= @game.player2.name %></td>
       <td class="active"></td>
       <td></td>
       <td></td>

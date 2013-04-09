@@ -11,6 +11,8 @@ var gameOver = function (player) {
     data: {winner: winnerName} // pass time, too
   }).done(function (response) {
     $('#game_stats').append("<h2>"+winnerName+" wins!</h2><br><a href='/'>New Players</a>");
+    $('#game_stats').append("<a href='/'>Play Again</a>");
+    $('#game_stats').append("<a href='/'>Page for this game</a>");
     $('#game_stats').slideDown();
 
   });
