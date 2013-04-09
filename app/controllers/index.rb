@@ -8,7 +8,7 @@ post '/new_players' do
     @player2 = Player.find_or_create_by_name(:name => params[:player2])
     @game = Game.create(:player1_id => @player1.id,
                         :player2_id => @player2.id)
-  erb :game
+  erb :gameplay
 end
 
 put '/games/:id' do

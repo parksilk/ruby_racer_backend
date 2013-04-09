@@ -1,8 +1,15 @@
+body {
+  background-color: gray;
+}
+
 .container {
-  margin: 20px auto;
+  background: white;
+  margin: 60px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px solid black;
+  box-shadow: 5px 5px 30px;
+  border-radius: 3px;
 }
 th {
   text-align: left;

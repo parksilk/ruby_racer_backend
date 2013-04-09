@@ -10,10 +10,10 @@ var gameOver = function (player) {
     type: "put",
     data: {winner: winnerName} // pass time, too
   }).done(function (response) {
-    $('.racer_table').after("<h2>"+winnerName+" wins!</h2><br><a href='/'>Restart</a>");
+    $('#game_stats').append("<h2>"+winnerName+" wins!</h2><br><a href='/'>New Players</a>");
+    $('#game_stats').slideDown();
 
   });
-  // gameFinished = true
 };
 
 var updatePlayerPosition = function (player_keycode) {
@@ -36,15 +36,14 @@ var updatePlayerPosition = function (player_keycode) {
   }
 };
 
-
-
 $(document).ready(function() {
   $(document).on('keyup', function(event) {
-
-    // if (gameFinished == true) {
     updatePlayerPosition(event.keyCode);
-    // }
+  });
+});
 
+
+  // OLD CODE, replaced by Jeffrey's refactor above.
     // if(event.keyCode == 80) {
     //   $('#player2_strip td.active').toggleClass('active').next().toggleClass('active');
     //   if($('#player2_strip td:last').hasClass('active')) {
@@ -60,5 +59,3 @@ $(document).ready(function() {
     //     location.reload();
     //   };
     // };
-  });
-});
